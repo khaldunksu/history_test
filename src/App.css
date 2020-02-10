@@ -1,38 +1,59 @@
-.App {
+body {
+  font-size: 16px;
+  margin: 0 auto;
+  font-style: italic;
+  background-image: url(./doski_chrnyy_ryad_tekstura_fon_derevo_55220_480x800.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:  white
+}
+
+input {
+  cursor: pointer;
+}
+
+.content {
+ margin-left: 30%;
+ margin-right: 30%;
+ 
+}
+
+.header {
+  font-weight: 700;
+  font-size: 24px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question {
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.block_question {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.answer {
+  margin-left: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+.result {
+  text-align: center;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hidden {
+  visibility: hidden;
 }
+
+.reset {
+  margin-top: 10px;
+}
+
+.App {
+  background-image: url(./doski_chrnyy_ryad_tekstura_fon_derevo_55220_480x800.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:  white
+}
+
