@@ -16,7 +16,7 @@ class Questions extends React.Component {
           <div className="block_question">
             <p className='question'> 1/7 Какое животное изображено на гербе факультета Когтевран?</p>
             {FirstQuestionsList.map(i => (<>
-              <label ><input type="radio" value={i.name} name="firstQuest" className="ui radio checkbox"
+              <label ><input type="radio" key={i.id} value={i.name} name="firstQuest" className="ui radio checkbox"
                 checked={firstQuest === i.name} onChange={handleChange} /> {i.name}</label>
               <br></br> </>))}
           </div>
@@ -24,7 +24,7 @@ class Questions extends React.Component {
           <div className="block_question">
             <p className='question'> 2/7 Кто убил Седрика Диггори?</p>
             {secondQuestionsList.map(i => (<>
-              <label ><input type="radio" value={i.name} name="secondQuest" className="ui radio checkbox"
+              <label ><input type="radio" key={i.id}  value={i.name} name="secondQuest" className="ui radio checkbox"
                 checked={secondQuest === i.name} onChange={handleChange} /> {i.name}</label>
               <br></br> </>))}
           </div>
@@ -51,7 +51,7 @@ class Questions extends React.Component {
           <div className="block_question">
             <p className='question'> 4/7 Сколько крестражей было у Волан-де-Морта?</p>
             {fourQuestionsList.map(i => (<>
-              <label ><input type="radio" value={i.name} name="fourQuest" className="ui radio checkbox"
+              <label ><input type="radio" key={i.id}  value={i.name} name="fourQuest" className="ui radio checkbox"
                 checked={fourQuest === i.name} onChange={handleChange} /> {i.name}</label>
               <br></br> </>))}
           </div>
@@ -59,10 +59,10 @@ class Questions extends React.Component {
           <div className="block_question">
             <p className='question'> 5/7 Какой вид принимает патронус Гермионы?</p>
             <select className="ui dropdown"
-              value={fiveQuest} name="fiveQuest"
+               value={fiveQuest} name="fiveQuest"
               onChange={handleChange} >
               {fiveQuestionsList.map(i =>
-                <option value={i.name}>{i.name}</option>)}
+                <option key={i.id} value={i.name}>{i.name}</option>)}
             </select>
           </div>
 
@@ -72,7 +72,7 @@ class Questions extends React.Component {
               value={sixQuest} name="sixQuest"
               onChange={handleChange}>
               {sixQuestionsList.map(i =>
-                <option value={i.name}>{i.name}</option>)}
+                <option key={i.id} value={i.name}>{i.name}</option>)}
             </select>
           </div>
 
@@ -88,22 +88,22 @@ class Questions extends React.Component {
               <div>
                 <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                   Узнать результат!</button>
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
-                      <div class="modal-body">
+                      <div className="modal-body">
                         <p style={{ color: 'black' }}> Каждый не отвеченный ответ считается
              неправильным, Вы уверены что хотите продолжить?</p>
                       </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                      <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Отмена</button>
                         <HashRouter>
-                          <NavLink to="/answer" class="btn btn-primary">Продолжить</NavLink>
+                          <NavLink to="/answer" className="btn btn-primary">Продолжить</NavLink>
                         </HashRouter>
                       </div>
 
@@ -117,7 +117,7 @@ class Questions extends React.Component {
               </HashRouter>
             )}
           <div className="reset">
-            <input type="reset" value="Сброить все" class="btn btn-danger" />
+            <input type="reset" value="Сброить все" className="btn btn-danger" />
           </div>
         </form>
       </div>
